@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2a5d40; /* Dark Green Background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #2a5d40;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+header .centered-image {
+    max-width: 250px; /* Set width to make image smaller */
+    height: 250px; /* Make the height equal to width for a circular shape */
+    border-radius: 50%; /* Make the image round */
+    margin: 0 auto;
+    display: block; /* Center the image */
+    border: 5px solid #fff; /* Optional: add a white border around the image */
+}
+
+/* Main content */
+.content {
+    padding: 40px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.content ol {
+    margin-left: 20px;
+}
+
+.content ol li {
+    margin-bottom: 10px;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
