@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Salon</title>
     <link rel="stylesheet" href="style.css"> 
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="index-page">
+
     
     <nav>
         <ul>
@@ -40,9 +40,9 @@
         <h3>Masaža</h3>
         <p><b>Masaža</b> je drevna praksa koja se koristi za opuštanje tijela i uma, poboljšanje cirkulacije, smanjenje stresa i olakšavanje bolova. Postoji mnogo različitih tehnika masaže, uključujući:</p>
         
-        <p>Vrste masaze:</p>
+        <p>Vrste masaže:</p>
         <ol>
-            <li><b>Švedska masaža</b> - koristi dug stroking pokrete, gnječenje i cirkularne pokrete, idealna je za opuštanje i poboljšanje cirkulacije.</li>
+            <li><b>Švedska masaža</b> - koristi dug stroking pokrete, gnjecenje i cirkularne pokrete, idealna je za opuštanje i poboljšanje cirkulacije.</li>
             <li><b>Duboka tkivna masaža</b> - fokusira se na dublje slojeve mišića i vezivnog tkiva, često se koristi za rešavanje hroničnih bolova i napetosti.</li>
             <li><b>Aromaterapijska masaža</b> - koristi eterična ulja za poboljšanje fizičkog i emocionalnog stanja.</li>
             <li><b>Sportska masaža</b> - prilagođena sportistima, pomaže u prevenciji i oporavku od povreda.</li>
@@ -55,11 +55,41 @@
         <h3>Hidzama</h3>
         <p><b>Hidzama</b> je metoda koja se koristi za uklanjanje toksina iz tijela, što može doprinijeti opštem zdravlju. Takođe, koristi se za obnavljanje ravnoteže tjelesnih energija i primjenjuje se kod raznih stanja kao što su bolovi u leđima, migrene, artritis i druge hronične bolesti.</p>
         
-        <p><i>Važno je napomenuti da, iako mnogi ljudi izvještavaju o pozitivnim efektima, hidžama nije zamena za konvencionalnu medicinsku negu. Pre nego što se odlučite za ovu terapiju, preporučuje se konsultacija sa kvalifikovanim zdravstvenim radnikom.</i></p>
+        <p><i>Važno je napomenuti da, iako mnogi ljudi izvještavaju o pozitivnim efektima, hidžama nije zamjena za konvencionalnu medicinsku negu. Pre nego što se odlučite za ovu terapiju, preporučuje se konsultacija sa kvalifikovanim zdravstvenim radnikom.</i></p>
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/YrMdSq4sSKI?si=kVcmZZ4dPuDZLXfa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+
+        <hr>
+
+        
+        <div class="toggle-section">
+            <h3>O Nama</h3>
+            <button id="toggleButton">Prikaži/Sakrij Opis</button>
+            <div id="toggleContent">
+                <p>Mi smo Beauty & Hijama centar TT, posvećeni vašem zdravlju i lepoti. Naš tim ima dugogodišnje iskustvo u pružanju masaža i hidžama usluga.</p>
+            </div>
+        </div>
+
+        <hr>
 
     
+        <div class="gallery">
+            <h3>Galerija</h3>
+            <div class="thumbnails">
+                <img src="IMG_1336.jpeg" alt="Thumbnail 1" class="thumbnail">
+                <img src="IMG_1337.jpeg" alt="Thumbnail 2" class="thumbnail">
+                <img src="IMG_1338.jpeg" alt="Thumbnail 3" class="thumbnail">
+            </div>
+        </div>
+
+        
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
+
+   
+    <script src="script.js"></script>
 </body>
 </html>
