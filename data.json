@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Masaža",
+        "description": "Opis masaže i njenih koristi."
+    },
+    {
+        "id": 2,
+        "title": "Hidžama",
+        "description": "Opis hidžame i njenih koristi."
+    }
+]
