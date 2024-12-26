@@ -1,65 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beauty Salon</title>
-    <link rel="stylesheet" href="style.css"> 
-    
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 </head>
-<body class="index-page">
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="cjenovnik.html">Cjenovnik</a></li>
-            <li><a href="o_nama.html">O Nama</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li>
-                <a href="https://www.instagram.com/hidzamacentar_tt/" target="_blank">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-            </li>
-        </ul>
-    </nav>
+<body>
+    <div class="theme-switcher">
+        <button id="lightTheme">Svijetla Tema</button>
+        <button id="darkTheme">Tamna Tema</button>
+    </div>
 
-    
     <header>
         <h1>Beauty & Hijama Centar TT</h1>
         <img src="IMG_1336.jpeg" alt="Beauty Salon Image" class="centered-image">
     </header>
 
-    
     <div class="content">
-        <h3>Biografija</h3>
-        <p>Zovem se <b>Tarik Tufo</b>. Završio sam srednju medicinsku školu u Sarajevu i sada radim kao fizioterapeut. Takođe sam prošao kurs za hidžamu. U budućnosti bih volio otvoriti svoj beauty salon, gde bih mogao spojiti svoje znanje i strast prema lepoti i zdravlju. Verujem da bih mogao pružiti kvalitetne usluge i doprineti blagostanju drugih.</p>
+        <section>
+            <h3>Biografija</h3>
+            <p>Zovem se <b>Tarik Tufo</b>. Završio sam srednju medicinsku školu u Sarajevu i sada radim kao fizioterapeut...</p>
+        </section>
 
         <hr>
 
-        <h3>Masaža</h3>
-        <p><b>Masaža</b> je drevna praksa koja se koristi za opuštanje tijela i uma, poboljšanje cirkulacije, smanjenje stresa i olakšavanje bolova. Postoji mnogo različitih tehnika masaže, uključujući:</p>
-        
-        <p>Vrste masaze:</p>
-        <ol>
-            <li><b>Švedska masaža</b> - koristi dug stroking pokrete, gnječenje i cirkularne pokrete, idealna je za opuštanje i poboljšanje cirkulacije.</li>
-            <li><b>Duboka tkivna masaža</b> - fokusira se na dublje slojeve mišića i vezivnog tkiva, često se koristi za rešavanje hroničnih bolova i napetosti.</li>
-            <li><b>Aromaterapijska masaža</b> - koristi eterična ulja za poboljšanje fizičkog i emocionalnog stanja.</li>
-            <li><b>Sportska masaža</b> - prilagođena sportistima, pomaže u prevenciji i oporavku od povreda.</li>
-        </ol>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TYUZT5lt6Aw?si=-cchKATO0NP-th-C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section class="toggle-section">
+            <h3>O Nama</h3>
+            <button id="toggleButton">Prikaži/Sakrij Opis</button>
+            <div id="toggleContent">
+                <p>Mi smo Beauty & Hijama centar TT, posvećeni vašem zdravlju i ljepoti...</p>
+            </div>
+        </section>
 
         <hr>
 
-        <h3>Hidzama</h3>
-        <p><b>Hidzama</b> je metoda koja se koristi za uklanjanje toksina iz tijela, što može doprinijeti opštem zdravlju. Takođe, koristi se za obnavljanje ravnoteže tjelesnih energija i primjenjuje se kod raznih stanja kao što su bolovi u leđima, migrene, artritis i druge hronične bolesti.</p>
-        
-        <p><i>Važno je napomenuti da, iako mnogi ljudi izvještavaju o pozitivnim efektima, hidžama nije zamena za konvencionalnu medicinsku negu. Pre nego što se odlučite za ovu terapiju, preporučuje se konsultacija sa kvalifikovanim zdravstvenim radnikom.</i></p>
+        <section class="gallery">
+            <h3>Galerija</h3>
+            <div class="thumbnails">
+                <img src="IMG_1336.jpeg" alt="Thumbnail 1" class="thumbnail">
+            </div>
+        </section>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/YrMdSq4sSKI?si=kVcmZZ4dPuDZLXfa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <hr>
+
+        <section class="accordion">
+            <h3>FAQ</h3>
+            <button class="accordion-btn">Koje usluge pružate?</button>
+            <div class="accordion-content">
+                <p>Pružamo usluge masaže, hidžame i druge tretmane za zdravlje i ljepotu.</p>
+            </div>
+
+            <button class="accordion-btn">Kako rezervisati termin?</button>
+            <div class="accordion-content">
+                <p>Termine možete rezervisati putem našeg kontakt obrasca ili nas pozvati direktno.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <form id="contactForm">
+                <label for="name">Ime:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Lozinka:</label>
+                <input type="password" id="password" name="password" required><br>
+
+                <label for="date">Datum:</label>
+                <input type="date" id="date" name="date" required><br>
+
+                <button type="submit">Pošaljite</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="weather-section">
+            <h3>Vremenska Prognoza</h3>
+            <button id="showWeather">Prikaži Vrijeme</button>
+            <p id="weatherData"></p>
+        </section>
+
+        <hr>
+
+        <section id="data-container"></section>
+        <div id="loading-spinner" style="display: none;">Učitavanje...</div>
     </div>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
